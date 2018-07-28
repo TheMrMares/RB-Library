@@ -7,6 +7,7 @@
 
 ## Details:
 
-### ```js RB.image(url)```
-
-### ```js RB.viewport(element)```
+### RB.image(```url```)
+- ```url``` = URL of image that you want create
+#### Return
+Function returns ```Image()``` object.
