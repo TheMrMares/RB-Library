@@ -1,0 +1,17 @@
+@import 'templates.scss';
+@import 'variables.scss';
+
+@font-face {
+    font-family: myOswald;
+    src: url('./../fonts/Oswald-Regular.ttf');
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    color: $dark;
+    font-family: myOswald, sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
