@@ -1,13 +1,9 @@
 # RB Library
 
-## What is that?
-1. Set of simple functions.
-2. Set that could make user work easier.
-3. Nothing proffessional, just things that are improt and useful for me.
-
-## Details:
-
-### RB.image(```url```)
+## RB.image()
+```js
+RB.image(url)
+```
 - ```url``` = URL of image that you want create
-#### Return
-Function returns ```Image()``` object.
+
+Effect: Returns Image() object.
