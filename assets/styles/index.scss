@@ -11,7 +11,17 @@ html, body {
     padding: 0;
     color: $dark;
     font-family: myOswald, sans-serif;
+    > section {
+        width: 100%;
+        display: flex;
+        > * {
+            margin: 10px;
+        }
+    }
 }
 * {
     box-sizing: border-box;
+}
+img, canvas {
+    border: 1px solid $dark;
 }
