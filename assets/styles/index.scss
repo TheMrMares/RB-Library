@@ -13,7 +13,6 @@ html, body {
     font-family: myOswald, sans-serif;
     > section {
         width: 100%;
-        display: flex;
         > * {
             margin: 10px;
         }
@@ -24,4 +23,9 @@ html, body {
 }
 img, canvas {
     border: 1px solid $dark;
+}
+
+.vpTest {
+    border: 1px solid red;
+    color: red;
 }
