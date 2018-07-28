@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     document.querySelector('#sampleImage').setAttribute('src', imageURL);
 
     // RB.image()
-    let myImg = RB.image(imageURL);
+    let myImg = RB.image({path: imageURL});
     document.body.appendChild(myImg);
     let canvas = document.querySelector('#sampleCanvas');
     let ctx = canvas.getContext('2d');
@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded',()=>{
 
     //RB.viewport()
     document.addEventListener('scroll', () => {
-        if(RB.viewport(document.querySelector('.vpTest'))){
+        if(RB.viewport({element: document.querySelector('.vpTest'), top: 0, bottom: 0})){
             document.querySelector('.vpTest').style.color = 'blue';
         } else {
             document.querySelector('.vpTest').style.color = 'red';
@@ -32,5 +32,12 @@ document.addEventListener('DOMContentLoaded',()=>{
     })
 
     //RB.append()
-    RB.append('div', {id: 'abc', class: 'abcccc'}, document.body);
+    let mynewobj = RB.append({
+        element: 'div', 
+        parent: document.body, 
+        content: 'Dzien dobry',
+        properties: {id: 'abc', class: 'abcabc'},
+        show: false
+    });
+    console.log(mynewobj);
 });

@@ -3,13 +3,13 @@ export default class Core {
 
     }
     //RB.image()
-    image(path){
+    image({path}){
         let ourImg = new Image();
         ourImg.src = path;
         return ourImg;
     }
     //RB.viewport()
-    viewport(element, topMod = 0, bottomMod = 0){
+    viewport({element, topMod = 0, bottomMod = 0}){
         let rect = element.getBoundingClientRect();
         let eHeight = Math.abs(rect.bottom - rect.top);
         let eCenter = rect.bottom - eHeight/2;
@@ -24,12 +24,19 @@ export default class Core {
         
     }
     //RB.append()
-    append(element, properties, parent){
+    append({element, properties, parent, content, show = true}){
         let newElement = document.createElement(element);
-        Object.getOwnPropertyNames(properties).forEach((item, index) => {
-            newElement.setAttribute(item, properties[item]);
-        });
-        parent.appendChild(newElement);
+        if(properties){
+            Object.getOwnPropertyNames(properties).forEach((item, index) => {
+                newElement.setAttribute(item, properties[item]);
+            });
+        }
+        if(content){
+            newElement.textContent = content;
+        }
+        if(show === true) {
+            parent.appendChild(newElement);
+        }
         return newElement;
     }
 }
