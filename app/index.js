@@ -30,4 +30,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             document.querySelector('.vpTest').style.color = 'red';
         }
     })
+
+    //RB.append()
+    RB.append('div', {id: 'abc', class: 'abcccc'}, document.body);
 });

@@ -23,4 +23,13 @@ export default class Core {
         return false;
         
     }
+    //RB.append()
+    append(element, properties, parent){
+        let newElement = document.createElement(element);
+        Object.getOwnPropertyNames(properties).forEach((item, index) => {
+            newElement.setAttribute(item, properties[item]);
+        });
+        parent.appendChild(newElement);
+        return newElement;
+    }
 }
