@@ -6,7 +6,7 @@
 RB.image({options})
 ```
 **Options:**
-- ```path: url``` = URL of image you want create
+- ```path:``` = URL of image you want create
 **Return:** Returns *Image()* object.
 **Example:**
 ```js
@@ -20,7 +20,7 @@ document.body.appendChild(ourImage); //Append image in body
 ## RB.viewport()
 **Function:**
 ```js
-RB.viewport({element: ```element```})
+RB.viewport({element: element})
 ```
 **Options:**
 - ```element:``` = HTML element you want to check is it in viewport or not.
@@ -46,7 +46,7 @@ document.addEventListener('scroll', () => { //Add scroll event to our document
 ## RB.append()
 **Function:**
 ```js
-RB.append({element: ```element```,parent: ```parent```, content: ```content```, properties: ```{properties}```, show: ```show```})
+RB.append({element: element, parent: parent, content: content, properties: {properties}, show: show})
 ```
 **Options:**
 - ```element:``` = element you want to create, for example 'div'.
@@ -62,6 +62,7 @@ let myNewObj = RB.append({ //Assign object that will be returned to variable "my
     parent: document.body, 
     content: 'Hello world',
     properties: {id: 'someId', class: 'someClass'},
-    show: false 
+    show: true
 });
+//After that code run our <div id="someId" class="someClass"> HelloWorld </div> is rendered in our document.body and assigned to our myNewObj
 ```
