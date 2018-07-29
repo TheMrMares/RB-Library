@@ -5,8 +5,7 @@ import 'images/example2.png';
 import imageURL from 'images/example.png';
 
 //Library
-import Core from './RB';
-const RB = new Core();
+import RB from './RB';
 
 //Tests
 document.addEventListener('DOMContentLoaded',()=>{
@@ -36,8 +35,8 @@ document.addEventListener('DOMContentLoaded',()=>{
         element: 'div', 
         parent: document.body, 
         content: 'Dzien dobry',
-        properties: {id: 'abc', class: 'abcabc'},
-        show: false
+        properties: {id: 'abc', class: 'someClass1 someClass2'},
+        show: true
     });
     console.log(mynewobj);
 });

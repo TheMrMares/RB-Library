@@ -61,8 +61,9 @@ let myNewObj = RB.append({ //Assign object that will be returned to variable "my
     element: 'div', 
     parent: document.body, 
     content: 'Hello world',
-    properties: {id: 'someId', class: 'someClass'},
+    properties: {id: 'someId', class: 'someClass1 someClass2'},
     show: true
 });
-//After that code run our <div id="someId" class="someClass"> HelloWorld </div> is rendered in our document.body and assigned to our myNewObj
+//After that code run our <div id="someId" class="someClass">HelloWorld</div>
+//is rendered in our document.body and assigned to our myNewObj
 ```

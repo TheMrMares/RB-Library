@@ -1,4 +1,4 @@
-export default class Core {
+class Core {
     constructor(){
 
     }
@@ -40,3 +40,6 @@ export default class Core {
         return newElement;
     }
 }
+
+let RB = new Core();
+export default RB;
